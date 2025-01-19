@@ -4,7 +4,6 @@ import { Issue } from "@prisma/client";
 import { Card, Flex, Heading, Text } from "@radix-ui/themes";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
-// import delay from "delay";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -21,8 +20,6 @@ export default async function IssueDeatailPage({ params }: Props) {
       id: parseInt(id),
     },
   });
-
-  // await delay(2000);
 
   if (!issue) notFound();
 
